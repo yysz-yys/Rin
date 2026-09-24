@@ -93,16 +93,16 @@ function Footer() {
                 <div ref={footerHtmlRef} />
                 <p className='text-sm text-neutral-500 font-normal link-line'>
                     <span onDoubleClick={() => {
-                        if(doubleClickTimes >= 2){ // actually need 3 times doubleClick
+                        if (doubleClickTimes >= 2) { // actually need 3 times doubleClick
                             setDoubleClickTimes(0)
-                            if(!loginEnabled) {
+                            if (!loginEnabled) {
                                 setLocation(buildLoginPath(HIDDEN_LOGIN_REDIRECT))
                             }
                         } else {
                             setDoubleClickTimes(doubleClickTimes + 1)
                         }
                     }}>
-                        © {new Date().getFullYear()} Powered by <a className='hover:underline' href="https://github.com/openRin/Rin" target="_blank">Rin</a>
+                        © {new Date().getFullYear()} Powered by cv君
                     </span>
                     {config.getBoolean('rss') && <>
                         <Spliter />
